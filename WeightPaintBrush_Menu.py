@@ -59,7 +59,6 @@ class SIMPLETWEAK_PT_Weight_Paint_Brush_Panel(bpy.types.Panel):
         if draw_subpanel(subox, "Saved Off Settings", simple_tweak_data, "Show_Off_Settings"):
 
             subox.prop(simple_tweak_data, "off_use_frontface", text="Front-Face Only")
-            subox.prop(simple_tweak_data, "off_use_frontface_falloff", text="Use Front-Face Falloff")
             row = subox.row()
             row.prop(simple_tweak_data, "off_falloff_shape", text="Falloff Shape", expand=True, emboss=True)
 
@@ -68,7 +67,6 @@ class SIMPLETWEAK_PT_Weight_Paint_Brush_Panel(bpy.types.Panel):
         if draw_subpanel(subox, "Saved On Settings", simple_tweak_data, "Show_On_Settings"):
 
             subox.prop(simple_tweak_data, "on_use_frontface", text="Front-Face Only")
-            subox.prop(simple_tweak_data, "on_use_frontface_falloff", text="Use Front-Face Falloff")
             row = subox.row()
             row.prop(simple_tweak_data, "on_falloff_shape", text="Falloff Shape", expand=True, emboss=True)
 
@@ -101,11 +99,9 @@ def update_paint_through(self, context):
 
 
         brush.use_frontface = self.on_use_frontface 
-        brush.use_frontface_falloff = self.on_use_frontface_falloff 
         brush.falloff_shape = self.on_falloff_shape 
     else:
         brush.use_frontface = self.off_use_frontface
-        brush.use_frontface_falloff = self.off_use_frontface_falloff 
         brush.falloff_shape = self.off_falloff_shape
 
 
@@ -118,13 +114,11 @@ class SIMPLETWEAK_Data(bpy.types.PropertyGroup):
 
     Show_Off_Settings: bpy.props.BoolProperty()
     off_use_frontface: bpy.props.BoolProperty(default=True)
-    off_use_frontface_falloff: bpy.props.BoolProperty(default=True)
     off_falloff_shape: bpy.props.EnumProperty(items=ENUM_Falloff_Shape, default="SPHERE")
 
 
     Show_On_Settings: bpy.props.BoolProperty()
     on_use_frontface: bpy.props.BoolProperty(default=False)
-    on_use_frontface_falloff: bpy.props.BoolProperty(default=False)
     on_falloff_shape: bpy.props.EnumProperty(items=ENUM_Falloff_Shape, default="PROJECTED")
 
 
