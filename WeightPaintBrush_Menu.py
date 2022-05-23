@@ -117,14 +117,14 @@ class SIMPLETWEAK_Data(bpy.types.PropertyGroup):
     Show_Settings: bpy.props.BoolProperty()
 
     Show_Off_Settings: bpy.props.BoolProperty()
-    off_use_frontface: bpy.props.BoolProperty(default=False)
-    off_use_frontface_falloff: bpy.props.BoolProperty(default=False)
+    off_use_frontface: bpy.props.BoolProperty(default=True)
+    off_use_frontface_falloff: bpy.props.BoolProperty(default=True)
     off_falloff_shape: bpy.props.EnumProperty(items=ENUM_Falloff_Shape, default="SPHERE")
 
 
     Show_On_Settings: bpy.props.BoolProperty()
-    on_use_frontface: bpy.props.BoolProperty(default=True)
-    on_use_frontface_falloff: bpy.props.BoolProperty(default=True)
+    on_use_frontface: bpy.props.BoolProperty(default=False)
+    on_use_frontface_falloff: bpy.props.BoolProperty(default=False)
     on_falloff_shape: bpy.props.EnumProperty(items=ENUM_Falloff_Shape, default="PROJECTED")
 
 
