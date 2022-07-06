@@ -1,12 +1,12 @@
 
 
 bl_info = {
-    "name": "Simple Tweaks",
+    "name": "X Ray Weight Paint",
     "author": "BlenderBoi",
     "version": (1, 0),
     "blender": (2, 80, 0),
     "location": "3D View",
-    "description": "A Collection of Minor Tweaks to Blender",
+    "description": "Add Weight Paint Button in a More Convinient Place",
     "warning": "",
     "doc_url": "",
     "category": "Utility",
