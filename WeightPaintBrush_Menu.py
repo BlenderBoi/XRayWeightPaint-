@@ -144,6 +144,7 @@ def unregister():
         bpy.utils.unregister_class(cls)
 
     # bpy.types.VIEW3D_HT_header.remove(draw_item)
+    bpy.types.VIEW3D_HT_tool_header.remove(draw_item)
 
     del bpy.types.Brush.SimpleTweakData
 
